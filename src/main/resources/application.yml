@@ -1,3 +1,6 @@
 micronaut:
     application:
         name: basic-app
+jackson:
+    module-scan: false
+    bean-introspection-module: true

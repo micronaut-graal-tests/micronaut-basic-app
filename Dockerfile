@@ -1,7 +1,7 @@
-FROM oracle/graalvm-ce:1.0.0-rc12 as graalvm
+FROM oracle/graalvm-ce:1.0.0-rc13 as graalvm
 COPY . /home/app/basic-app
 WORKDIR /home/app/basic-app
-RUN ./build-native-image.sh
+RUN native-image --no-server -cp build/libs/basic-app-*-all.jar
 
 FROM frolvlad/alpine-glibc
 EXPOSE 8080

@@ -1,2 +1,2 @@
 ./gradlew assemble
-native-image --no-server --class-path build/libs/basic-app-0.1-all.jar
+native-image --no-server --class-path build/libs/basic-app-*.jar

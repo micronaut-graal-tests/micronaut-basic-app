@@ -1,6 +1,9 @@
 micronaut:
     application:
         name: basic-app
+    server:
+        cors:
+            enabled: true
 jackson:
     module-scan: false
     bean-introspection-module: true

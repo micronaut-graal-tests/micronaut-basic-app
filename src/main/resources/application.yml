@@ -5,5 +5,4 @@ micronaut:
         cors:
             enabled: true
 jackson:
-    module-scan: false
     bean-introspection-module: true

@@ -30,3 +30,6 @@ jobs:
           name: Build (Native)
           command: PATH=$GRAALVM_HOME/bin:$PATH ./build-native-image.sh
           no_output_timeout: 30m
+      - store_artifacts:
+          path: ./basic-app
+          destination: basic-app

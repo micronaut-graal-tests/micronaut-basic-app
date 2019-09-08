@@ -1,2 +1,2 @@
 ./gradlew assemble
-native-image --no-server --no-fallback --class-path build/libs/basic-app-*.jar
+native-image --no-server --no-fallback --class-path build/libs/basic-app-*-all.jar

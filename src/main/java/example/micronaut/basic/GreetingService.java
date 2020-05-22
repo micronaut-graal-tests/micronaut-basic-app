@@ -1,4 +1,4 @@
-package example.micronaut;
+package example.micronaut.basic;
 
 import io.reactivex.Single;
 

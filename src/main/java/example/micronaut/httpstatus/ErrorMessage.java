@@ -1,4 +1,4 @@
-package example.micronaut;
+package example.micronaut.httpstatus;
 
 import io.micronaut.core.annotation.Introspected;
 

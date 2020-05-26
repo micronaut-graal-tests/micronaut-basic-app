@@ -7,6 +7,7 @@ Test application for Micronaut and GraalVM that uses:
 - Inject Service in a Controller
 - CORS support enabled
 - Return HTTP Response/HTTP Status with and without body
+- HTTP Client to call an external API
 
 ### Basic injection
 

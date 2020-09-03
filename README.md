@@ -1,32 +1,3 @@
 # Micronaut basic app #
 
-Test application for Micronaut and GraalVM that uses:
-
-- "Hello world" controller that returns the name passed as parameter 
-- Return a POJO wrapped in a reactive type (RxJava2 Single)
-- Inject Service in a Controller
-- CORS support enabled
-- Return HTTP Response/HTTP Status with and without body
-- HTTP Client to call an external API
-
-### Basic injection
-
-```
-curl localhost:8080/hello/Micronaut
-```
-
-### HTTP Status
-
-```
-curl -v localhost:8080/status/mutable-http-response-body
-curl -v localhost:8080/status/http-response-body
-curl -v localhost:8080/status/http-status
-curl -v localhost:8080/status/annotation
-```
-
-### HTTP Client
-
-```
-curl -v localhost:8080/bintray/packages
-curl -v localhost:8080/bintray/packages-lowlevel
-```
+:warning: **The master branch is not used anymore**. Checkout branches for each specific Micronaut version: `2.1.x`, `2.0.x`, `1.3.x`,...

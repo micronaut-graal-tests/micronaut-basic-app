@@ -13,7 +13,7 @@ repositories {
 micronaut {
     version = "2.0.3"
     runtime "netty"
-    testRuntime "junit5"
+    testRuntime "spock"
 
     processing {
         incremental true

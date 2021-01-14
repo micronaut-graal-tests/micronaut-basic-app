@@ -1,2 +1,3 @@
-./gradlew assemble
-native-image --no-fallback --class-path build/libs/basic-app-*-all.jar
+#!/bin/bash
+./gradlew nativeImage
+cp build/native-image/basic-app .

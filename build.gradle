@@ -40,4 +40,5 @@ java {
 
 nativeImage {
     imageName("basic-app")
+    args = ["-H:+StaticExecutableWithDynamicLibC"]
 }

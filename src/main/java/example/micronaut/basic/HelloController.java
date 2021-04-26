@@ -23,4 +23,9 @@ public class HelloController {
     public String version() {
         return VersionUtils.MICRONAUT_VERSION;
     }
+
+    @Get("/color/{color}")
+    public Color color(Color color) {
+        return color;
+    }
 }

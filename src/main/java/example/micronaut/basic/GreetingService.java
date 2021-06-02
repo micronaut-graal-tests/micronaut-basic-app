@@ -1,8 +1,7 @@
 package example.micronaut.basic;
 
 import io.reactivex.Single;
-
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 
 @Singleton
 public class GreetingService {

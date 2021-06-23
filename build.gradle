@@ -1,6 +1,7 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id("io.micronaut.application") version "2.0.0"
+    id("com.gorylenko.gradle-git-properties") version "2.3.1"
 }
 
 version = "0.1"
@@ -30,6 +31,7 @@ dependencies {
     implementation("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut:micronaut-management")
 
     runtimeOnly("ch.qos.logback:logback-classic")
 }
@@ -46,4 +48,8 @@ java {
 nativeImage {
     imageName("basic-app")
     args = ["-H:+StaticExecutableWithDynamicLibC"]
+}
+
+tasks.named("generateResourceConfigFile") {
+    resourceDirectories.from(tasks.findByName('generateGitProperties').output.map { it.getAsFile().parent })
 }

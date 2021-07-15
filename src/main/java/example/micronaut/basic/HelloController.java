@@ -3,7 +3,7 @@ package example.micronaut.basic;
 import io.micronaut.core.version.VersionUtils;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import io.reactivex.Single;
+import reactor.core.publisher.Mono;
 
 @Controller("/")
 public class HelloController {
@@ -15,7 +15,7 @@ public class HelloController {
     }
 
     @Get("/hello/{name}")
-    public Single<Greeting> sayHi(String name) {
+    public Mono<Greeting> sayHi(String name) {
         return greetingService.sayHi(name);
     }
 

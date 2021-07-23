@@ -22,19 +22,6 @@ micronaut {
     }
 }
 
-// TODO: Remove this when micronaut-reactor 2.0.0 is in core's BOM
-configurations {
-    all {
-        resolutionStrategy {
-            eachDependency { DependencyResolveDetails details ->
-                if (details.requested.group == 'io.micronaut.reactor') {
-                    details.useVersion '2.0.0-SNAPSHOT'
-                }
-            }
-        }
-    }
-}
-
 dependencies {
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     implementation("io.swagger.core.v3:swagger-annotations")

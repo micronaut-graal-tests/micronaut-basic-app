@@ -1,6 +1,6 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.0"
-    id("io.micronaut.application") version "2.0.8"
+    id("io.micronaut.application") version "3.0.0"
     id("com.gorylenko.gradle-git-properties") version "2.3.1"
 }
 
@@ -43,11 +43,11 @@ java {
     targetCompatibility = JavaVersion.toVersion("1.8")
 }
 
-nativeImage {
-    imageName("basic-app")
-    args = ["-H:+StaticExecutableWithDynamicLibC"]
-}
-
-tasks.named("generateResourceConfigFile") {
-    resourceDirectories.from(tasks.findByName('generateGitProperties').output.map { it.getAsFile().parent })
+graalvmNative {
+    binaries {
+        main {
+            imageName.set('basic-app')
+            buildArgs.add('-H:+StaticExecutableWithDynamicLibC')
+        }
+    }
 }

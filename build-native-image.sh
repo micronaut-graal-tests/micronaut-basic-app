@@ -1,3 +1,3 @@
 #!/bin/bash
-./gradlew nativeImage
-cp build/native-image/basic-app .
+./gradlew nativeCompile
+cp build/native/nativeCompile/basic-app .
